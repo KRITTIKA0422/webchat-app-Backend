@@ -13,7 +13,7 @@ const PORT=process.env.PORT || 4000
 const MONGO_URL = process.env.MONGO_URL;
 console.log(process.env.MONGO_URL);
 const httpServer = createServer(app);
-const io = new Server(httpServer, { cors: { origin: 'http://localhost:3000' } });
+const io = new Server(httpServer, { cors: { origin: 'https://quiet-sunflower-eca92c.netlify.app' } });
 io.on('connection', (socket) => {
     console.log(`⚡: ${socket.id} user just connected!`);
      //Listens and sends the message to all the users on the server
